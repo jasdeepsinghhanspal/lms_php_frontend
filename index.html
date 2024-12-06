@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h2>LMS Access</h2>
+            <form id="lmsAccessForm" onsubmit="accessLMS(event)">
+                <input type="password" id="lmsPassword" placeholder="Enter Password" required>
+                <button type="submit">Enter LMS</button>
+            </form>
+        </aside>
+        <main>
+            <h1>Welcome to the LMS</h1>
+            <h3>Explore Our Courses</h3>
+            <div class="courses">
+                <div class="course">Data Science</div>
+                <div class="course">MERN</div>
+                <div class="course">MEAN</div>
+                <div class="course">DevOps</div>
+                <div class="course">AWS</div>
+                <div class="course">Azure</div>
+                <div class="course">GitHub</div>
+            </div>
+            <h3>Interested in a Course?</h3>
+            <form id="courseForm" action="save_interest.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <select name="course" required>
+                    <option value="" disabled selected>Select a course</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="MERN">MERN</option>
+                    <option value="MEAN">MEAN</option>
+                    <option value="DevOps">DevOps</option>
+                    <option value="AWS">AWS</option>
+                    <option value="Azure">Azure</option>
+                    <option value="GitHub">GitHub</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
